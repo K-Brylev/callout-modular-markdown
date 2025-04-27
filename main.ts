@@ -78,7 +78,7 @@ export default class CalloutByTag extends Plugin {
 		const vault = this.app.vault.adapter;
 		const path = '.obsidian/snippets/CalloutByTag.css';
 
-		const colors = ['red', 'blue', 'green', 'cyan', 'purple', 'orange', 'pink'];
+		const colors = ['red', 'blue', 'green', 'cyan', 'yellow', 'purple', 'orange', 'pink'];
 
 		interface Callout {
 			[key: string]: [string[],string];
