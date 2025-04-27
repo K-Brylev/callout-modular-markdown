@@ -76,7 +76,7 @@ export default class CalloutByTag extends Plugin {
 
 	async createCSSSnippet() {
 		const vault = this.app.vault.adapter;
-		const path = '.obsidian/snippets/CalloutByTag.css';
+		const path = '.obsidian/snippets/CalloutModularMarkdown.css';
 
 		const colors = ['red', 'blue', 'green', 'cyan', 'yellow', 'purple', 'orange', 'pink'];
 
@@ -101,7 +101,7 @@ export default class CalloutByTag extends Plugin {
 			'quote':[['quote', 'cite'], 'lucide-quote'],
 		};
 
-		await vault.write(path, `/* CSS Snippet for CalloutByTag Plugin */\n\n`);
+		await vault.write(path, `/* CSS Snippet for CalloutModularMarkdown Plugin */\n\n`);
 
 		await vault.append(path, '/*Additional stylings for Callouts*/\n');
 		vault.append(path, 

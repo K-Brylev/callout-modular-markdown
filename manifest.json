@@ -4,8 +4,6 @@
 	"version": "1.0.0",
 	"minAppVersion": "0.15.0",
 	"description": "Expands upon the callout feature in Obsidian by making type identifiers modular, allowing for more customization and functionality.",
-	"author": "Obsidian",
-	"authorUrl": "https://obsidian.md",
-	"fundingUrl": "https://obsidian.md/pricing",
-	"isDesktopOnly": false
+	"author": "KBrylev",
+	"isDesktopOnly": true
 }

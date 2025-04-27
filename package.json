@@ -1,7 +1,7 @@
 {
-	"name": "obsidian-sample-plugin",
+	"name": "callout-modular-markdown",
 	"version": "1.0.0",
-	"description": "This is a sample plugin for Obsidian (https://obsidian.md)",
+	"description": "Expands upon the callout feature in Obsidian by making type identifiers modular, allowing for more customization and functionality.",
 	"main": "main.js",
 	"scripts": {
 		"dev": "node esbuild.config.mjs",
