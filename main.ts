@@ -17,10 +17,10 @@ export default class CalloutByTag extends Plugin {
 		await this.loadSettings();
 		await this.createCSSSnippet();
 		this.registerEvent(
-			this.app.workspace.on('editor-menu', (menu, editor, view) => {
-				menu.addItem((item) => {
+			this.app.workspace.on('editor-menu', (scroll, editor, view) => {
+				scroll.addItem((item) => {
 					item.setTitle('Insert Icon')
-						.setIcon('list-plus')
+						.setIcon('copy-plus')
 						.setSection('insert')
 						.onClick(() => {
 							new IconModal(this.app).open();
