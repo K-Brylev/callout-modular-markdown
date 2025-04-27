@@ -105,7 +105,7 @@ export default class CalloutByTag extends Plugin {
 
 		await vault.append(path, '/*Additional stylings for Callouts*/\n');
 		vault.append(path, 
-			`.callout[data-callout*=\"-darken\"] .callout-content{\n\tbackground-color: #00000020 !important;\n\tborder-radius: var(--callout-radius);\n\tpadding: var(--callout-padding)\n}\n\n`
+			`.callout[data-callout*=\"#darken\"] .callout-content{\n\tbackground-color: #00000020 !important;\n\tborder-radius: var(--callout-radius);\n\tpadding: var(--callout-padding)\n}\n\n`
 		);
 
 		await vault.append(path, '/*Stylings to fix base Callouts*/\n');
@@ -128,7 +128,7 @@ export default class CalloutByTag extends Plugin {
 		await vault.append(path, '/*Stylings to change Callout Icon by using the iconId*/\n');
 		getIconIds().forEach(iconId => {
 			vault.append(path, 
-				`.callout[data-callout*=\"-${iconId}\"] {\n\t--callout-icon: ${iconId};\n}\n\n`
+				`.callout[data-callout*=\"#${iconId}\"] {\n\t--callout-icon: ${iconId};\n}\n\n`
 			);
 		});
 	}
@@ -137,6 +137,7 @@ export default class CalloutByTag extends Plugin {
 class IconModal extends SuggestModal<IconName> {
 	constructor(app: App) {
 		super(app);
+		this.limit = 3000;
 	}
 
 	getSuggestions(query: string): IconName[] {
@@ -160,16 +161,6 @@ class IconModal extends SuggestModal<IconName> {
 			view.editor.replaceRange(icon, cursor);
 		}
 		// You can also use the icon name directly if needed
-	}
-
-	onOpen() {
-		const { contentEl } = this;
-		contentEl.setText('Search for an icon:');
-	}
-
-	onClose() {
-		const { contentEl } = this;
-		contentEl.empty();
 	}
 }
 
