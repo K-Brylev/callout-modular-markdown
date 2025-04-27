@@ -105,7 +105,13 @@ export default class CalloutByTag extends Plugin {
 
 		await vault.append(path, '/*Additional stylings for Callouts*/\n');
 		vault.append(path, 
-			`.callout[data-callout*=\"#darken\"] .callout-content{\n\tbackground-color: #00000020 !important;\n\tborder-radius: var(--callout-radius);\n\tpadding: var(--callout-padding)\n}\n\n`
+			`.callout[data-callout*=\"#darken\"] .callout-content{\n\tbackground-color: #00000020 !important;\n\tborder-radius: var(--callout-radius);\n}\n\n`
+		);
+		vault.append(path, 
+			`.callout[data-callout*=\"#lighten\"] .callout-content{\n\tbackground-color: #FFFFFF20 !important;\n\tborder-radius: var(--callout-radius);\n}\n\n`
+		);
+		vault.append(path, 
+			`.callout[data-callout*=\"#padding\"] .callout-content{\n\tpadding: var(--callout-padding)\n}\n\n`
 		);
 
 		await vault.append(path, '/*Stylings to fix base Callouts*/\n');
