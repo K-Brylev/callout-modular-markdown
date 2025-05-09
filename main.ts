@@ -111,6 +111,12 @@ export default class CalloutByTag extends Plugin {
 			`.callout[data-callout*=\"#lighten\"] .callout-content{\n\tbackground-color: #FFFFFF20 !important;\n\tborder-radius: var(--callout-radius);\n}\n\n`
 		);
 		vault.append(path, 
+			`.callout[data-callout*=\"#gradient-lighten\"] .callout-content{\n\tbackground-image: linear-gradient( #FFFFFF20, #FFFFFF00) !important;\n\tborder-radius: var(--callout-radius);\n}\n\n`
+		);
+		vault.append(path, 
+			`.callout[data-callout*=\"#gradient-darken\"] .callout-content{\n\tbackground-image: linear-gradient( #00000020, #00000000) !important;\n\tborder-radius: var(--callout-radius);\n}\n\n`
+		);
+		vault.append(path, 
 			`.callout[data-callout*=\"#padding\"] .callout-content{\n\tpadding: var(--callout-padding)\n}\n\n`
 		);
 
